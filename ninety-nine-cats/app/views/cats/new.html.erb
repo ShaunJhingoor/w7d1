@@ -4,14 +4,23 @@
 <input type = string id ="name" name ="cat[name]" value = "<%= @cat.name%>">
 
 <label for= "color">Color: </label>
-<input type = string id ="color" name ="cat[color]" value = "<%= @cat.color%>">
+<select type = string id ="color" name ="cat[color]" value = "<%= @cat.color%>">
+    <option disabled selected>-- Please Select --</option>
+    <option value="Red">Red</option>
+    <option value="Blue">Blue</option>
 
 <label for= "birth_date">Birth_date:
 <input type = date id ="birth_date" name ="cat[birth_date]" value = "<%= @cat.birth_date%>">
 
 <label for= "sex">sex: </label>
-<input type = string id ="sex" name ="cat[sex]" value = "<%= @cat.sex%>">
+<input type = hidden id ="sex" name ="cat[sex]" value = "<%= @cat.sex%>">
+    <input type = radio>
+    <label for = "M">M</label>
+    <input type = radio>
+    <label for = "F">F</label>
 
-<label for= "description">Description: </label>
-<input type = string id ="description" name ="cat[description]" value = "<%= @cat.description%>">
-</form>
+<label for= "description">Description: 
+ <textarea id ="description" name ="cat[description]" value=" <% @cat.description %>" cols="30" rows="10"></textarea>
+</label>
+
+

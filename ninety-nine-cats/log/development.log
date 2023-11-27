@@ -925,3 +925,71 @@ Processing by CatsController#edit as HTML
 Completed 200 OK in 41ms (Views: 12.5ms | ActiveRecord: 6.7ms | Allocations: 8733)
 
 
+Started GET "/cats" for ::1 at 2023-11-27 17:46:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:5
+  Rendered cats/_cat.html.erb (Duration: 1.1ms | Allocations: 458)
+  Rendered cats/index.html.erb within layouts/application (Duration: 77.8ms | Allocations: 14213)
+  Rendered layout layouts/application.html.erb (Duration: 89.9ms | Allocations: 19145)
+Completed 200 OK in 162ms (Views: 51.2ms | ActiveRecord: 51.3ms | Allocations: 31359)
+
+
+Started GET "/cats/new" for ::1 at 2023-11-27 17:46:44 -0500
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 221)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 1316)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 1643)
+
+
+Started GET "/cats/new" for ::1 at 2023-11-27 17:52:13 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 441)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 5396)
+Completed 200 OK in 91ms (Views: 28.7ms | ActiveRecord: 13.1ms | Allocations: 28528)
+
+
+Started GET "/cats/new" for ::1 at 2023-11-27 17:52:45 -0500
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1793)
+Completed 200 OK in 21ms (Views: 5.1ms | ActiveRecord: 4.5ms | Allocations: 7064)
+
+
+Started GET "/cats/new" for ::1 at 2023-11-27 17:53:12 -0500
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1804)
+Completed 200 OK in 21ms (Views: 7.6ms | ActiveRecord: 5.3ms | Allocations: 7063)
+
+
+Started GET "/cats/new" for ::1 at 2023-11-27 17:53:31 -0500
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 286)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 1803)
+Completed 200 OK in 23ms (Views: 9.4ms | ActiveRecord: 5.0ms | Allocations: 7062)
+
+
+Started GET "/cats/new" for ::1 at 2023-11-27 17:59:18 -0500
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 1804)
+Completed 200 OK in 73ms (Views: 10.8ms | ActiveRecord: 5.6ms | Allocations: 9503)
+
+
