@@ -1,0 +1,13 @@
+<h1>
+    Hello from index
+</h1>
+<ul>
+    <%@cats.each do |cat|%> 
+        <li>
+            <%=render 'cat', cat: cat, action: :format_index%>   
+        </li>
+    <%end%>
+</ul>
+
+<%# includes all cats ==> must iterate thru%>
+<%# line 5 cat refers to line 4 cat%>

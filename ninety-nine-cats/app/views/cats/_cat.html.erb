@@ -1,0 +1,13 @@
+<ul>
+    <h1> <%= cat.name %> </h1>
+    <li><%=cat.color %> </li>
+    <li> <%=cat.sex %></li>
+    <li><%=cat.birth_date %> </li>
+    <li> <p> <%= cat.description %></p> </li>
+</ul>
+
+<% if action == :format_show%>
+    <li> <a href= "<%= cats_url %>">Cats Index</a> </li>
+<% elsif action == :format_index%>
+    <li> <a href= "<%= cat_url(cat.id) %>">Cat Show</a> </li>
+<%end%>
