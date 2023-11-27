@@ -1,0 +1,17 @@
+<h1>Add new cat</h1>
+<form action= "<%=cats_url%> method = "post">
+<label for= "name">Name: </label>
+<input type = string id ="name" name ="cat[name]" value = "<%= @cat.name%>">
+
+<label for= "color">Color: </label>
+<input type = string id ="color" name ="cat[color]" value = "<%= @cat.color%>">
+
+<label for= "birth_date">Birth_date:
+<input type = date id ="birth_date" name ="cat[birth_date]" value = "<%= @cat.birth_date%>">
+
+<label for= "sex">sex: </label>
+<input type = string id ="sex" name ="cat[sex]" value = "<%= @cat.sex%>">
+
+<label for= "description">Description: </label>
+<input type = string id ="description" name ="cat[description]" value = "<%= @cat.description%>">
+</form>

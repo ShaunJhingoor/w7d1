@@ -859,3 +859,69 @@ Processing by CatsController#index as HTML
 Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 2002)
 
 
+Started GET "/cats" for ::1 at 2023-11-27 17:29:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (41.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:5
+  Rendered cats/_cat.html.erb (Duration: 1.1ms | Allocations: 458)
+  Rendered cats/index.html.erb within layouts/application (Duration: 120.2ms | Allocations: 14408)
+  Rendered layout layouts/application.html.erb (Duration: 140.6ms | Allocations: 17711)
+Completed 200 OK in 215ms (Views: 92.2ms | ActiveRecord: 82.0ms | Allocations: 29939)
+
+
+Started GET "/cats/1" for ::1 at 2023-11-27 17:29:53 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/_cat.html.erb (Duration: 0.5ms | Allocations: 88)
+  Rendered cats/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 265)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 2839)
+Completed 200 OK in 54ms (Views: 17.4ms | ActiveRecord: 1.3ms | Allocations: 6859)
+
+
+Started GET "/cats/new" for ::1 at 2023-11-27 17:30:02 -0500
+Processing by CatsController#new as HTML
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 688)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: cat:
+  app/controllers/cats_controller.rb:43:in `cat_params'
+  app/controllers/cats_controller.rb:13:in `new'
+
+Started POST "/__better_errors/2803ffad78b2c9fb/variables" for ::1 at 2023-11-27 17:30:02 -0500
+Started GET "/cats/1/new" for ::1 at 2023-11-27 17:31:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/cats/1/new"):
+  
+Started GET "/cats/1/new" for ::1 at 2023-11-27 17:34:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/cats/1/new"):
+  
+Started GET "/cats/new" for ::1 at 2023-11-27 17:34:24 -0500
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 289)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 1806)
+Completed 200 OK in 75ms (Views: 25.5ms | ActiveRecord: 12.1ms | Allocations: 7119)
+
+
+Started GET "/cats/1/edit" for ::1 at 2023-11-27 17:35:58 -0500
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 1.0ms | Allocations: 298)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 1789)
+Completed 200 OK in 41ms (Views: 12.5ms | ActiveRecord: 6.7ms | Allocations: 8733)
+
+
